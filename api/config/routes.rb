@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   post "roman", to: "convert_to_roman#convert"
 
+  resource :roman, default: {format: :json}
+  resource :arabic, default: {format: :json}
+
 end

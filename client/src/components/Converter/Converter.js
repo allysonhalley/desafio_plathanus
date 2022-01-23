@@ -1,4 +1,3 @@
-
 import { Component } from 'react';
 import { Box, Paper, Typography, TextField, FormControl, Button, Card } from '@mui/material';
 
@@ -29,7 +28,7 @@ class Converter extends Component {
     }
     
     render(){        
-        const { arabic } = this.state;        
+        const { arabic, roman } = this.state;        
         return (
             <Paper align='center'>
                 <Typography>
@@ -39,8 +38,8 @@ class Converter extends Component {
                     <Box   component="form" noValidate autoComplete="off"
                     sx={{ '& .MuiTextField-root': { m: 1, width: '250px' }, }} >
                         <FormControl >
-                            <TextField required size="small" id="outlined-required" label="Required" defaultValue="Nome" values={arabic} />
-                            <TextField required size="small" id="outlined-required" label="Required" defaultValue="Sobrenome" values={roman} />
+                            <TextField size="small" id="outlined-required" label="Required" defaultValue="Arabic" values={arabic} />
+                            <TextField size="small" id="outlined-required" label="Required" defaultValue="Roman" values={roman} />
                             <Card>
                                 <Button variant="outlined" color="success" size="small" sx={{ '& button': { m: 1} }}
                                 onClick={ () => { alert('vai salvar')}} >
