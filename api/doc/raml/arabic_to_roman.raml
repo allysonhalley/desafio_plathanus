@@ -1,0 +1,42 @@
+#%RAML 1.0
+title: Arabic to Roman
+baseUri: http://localhost:3000
+/roman:
+  post:
+    description: Coverto Arabic Numbers to Roman Numbers
+    headers:
+      Content-Type: {}
+    body:
+      application/json: |
+        {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "required": [ "data" ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "integer",
+              "required": [ "arabic" ],
+              "properties": {
+                "roman_number": { "type": "string" }
+              }
+            }
+          }
+        }
+    responses:
+      "200":
+        body:
+          application/json: |-
+            {
+              "$schema": "http://json-schema.org/draft-04/schema#",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "request": {
+                  "type": "object",
+                  "properties": {
+                    "roman_number": { "type": "string" }
+                  }
+                }
+              }
+            }
