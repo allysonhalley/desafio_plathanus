@@ -1,12 +1,16 @@
+# Classe responsável toda a regra do algorítmo
 module ConvertToRomanHelper
 
+    # Método responsável por retornar o o Algorismo Romano
     def convert_to_roman(arabic)
         @roman_algorisms = Array.new
         convert_algorism(arabic).join
     end
 
+    # Bloco privado são a decomposição do algorismos por casas decimais
     private
 
+    # Converte o conjunto de todos os algorismos juntos e o retorna
     def convert_algorism(arabic)
         iterator = 1
         arabic.to_s.reverse.split('').each do |algorism|
@@ -26,6 +30,7 @@ module ConvertToRomanHelper
 
     end
 
+    # Converte uidade para Romano
     def units_algorism(arabic_unit)        
         arabic_unit.to_s.reverse.split('').each do |algorism|
             if algorism.to_i < 10 && algorism.to_i > 0
@@ -54,6 +59,7 @@ module ConvertToRomanHelper
          @roman_algorisms
     end
 
+    # Converte dezena para Romano
     def thens_algorism(arabic_unit)        
         arabic_unit.to_s.reverse.split('').each do |algorism|
             if algorism.to_i < 10 && algorism.to_i > 0
@@ -82,6 +88,7 @@ module ConvertToRomanHelper
          @roman_algorisms
     end
 
+    # Converte centena para Romano
     def hundreds_algorism(arabic_unit)        
         arabic_unit.to_s.reverse.split('').each do |algorism|
             if algorism.to_i < 10 && algorism.to_i > 0
@@ -110,6 +117,7 @@ module ConvertToRomanHelper
          @roman_algorisms
     end
 
+    # Converte milhar para Romano
     def thousands_algorism(arabic_unit)        
         arabic_unit.to_s.reverse.split('').each do |algorism|
             if algorism.to_i < 10 && algorism.to_i > 0

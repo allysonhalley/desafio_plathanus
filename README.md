@@ -14,10 +14,38 @@ https://en.wikipedia.org/wiki/Roman_numerals for the rules concerning the constr
 ## BACKEND SOLUTION
 * Foi feito o algoritmo seguindo até a milhar;
 * Foi feito deploy no heroku
-### Instruções:
+## Instruções:
 * No aplicativo Postman ou similiar
+
+## Localmente
+* Obs:
 ```
-url(post): https://plathanus-desafio.herokuapp.com/roman
+Verificar versões utilizadas no "Gemfile".
+```
+### Comandos:
+```
+cd api
+bundle install
+rials s
+```
+
+```
+url(post):
+	http://localhost:3000/roman
+
+body (json):
+{
+	"data": {
+		"arabic": 4999
+	}
+}
+```
+
+* Online (heroku)
+```
+url(post):
+	https://plathanus-desafio.herokuapp.com/roman
+
 body (json):
 {
 	"data": {
@@ -28,3 +56,5 @@ body (json):
 
 ### Observação
 * Números arabicos > 4000, vão apresentar um - indicando leitura de mil
+
+* A pasta client está em construção, me servindo como laboratório (frontend em evolução)

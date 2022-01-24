@@ -1,6 +1,7 @@
 class ConvertToRomanController < ApplicationController
     include ConvertToRomanHelper
     
+    # Endpoins responsável pelo acesso ao algoritmo
     def convert
         render json: roman
     end
